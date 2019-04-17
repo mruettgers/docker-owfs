@@ -4,11 +4,16 @@ MAINTAINER Michael Ruettgers <michael@ruettgers.eu>
 ENV DEBIAN_FRONTEND noninteractive
 
 ENV PACKAGES \
-  owserver
+  owserver \
+  ow-shell
 
-RUN set -xe && \
-  apt-get -y update && \
-  apt-get install -y ${PACKAGES} && \
-  apt-get clean
+RUN set -xe \
+  && apt-get -y update \
+  && apt-get install -y ${PACKAGES} \
+  && apt-get clean
 
-CMD ["/usr/bin/owserver"]
+COPY files/ /
+
+ENTRYPOINT ["/docker/docker-entrypoint.sh"]
+
+CMD ["owserver", "--foreground"]
