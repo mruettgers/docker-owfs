@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ENV PACKAGES \
   owserver \
+  owhttpd \
   ow-shell
 
 RUN set -xe \
