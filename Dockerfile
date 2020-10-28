@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 MAINTAINER Michael Ruettgers <michael@ruettgers.eu>
 
 ENV DEBIAN_FRONTEND noninteractive
