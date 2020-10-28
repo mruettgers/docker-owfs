@@ -1,4 +1,4 @@
-FROM arm32v7/debian:stretch-slim
+FROM debian:stretch-slim
 MAINTAINER Michael Ruettgers <michael@ruettgers.eu>
 
 ENV DEBIAN_FRONTEND noninteractive
